@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         this.context = this;
 
         //initializing alarm manager
@@ -77,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 //Update Text Box when alarm is on
                 set_alarm_text("Alarm is active! " + hourString + ":" + minuteString);
 
+                //puts string in intent
+                myIntent.putExtra("extra", "alarm 1");
+
                 //Create the pending intent until specified time
                 pending_intent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -92,8 +93,12 @@ public class MainActivity extends AppCompatActivity {
                 //Update Text Box when alarm is off
                 set_alarm_text("Alarm is off!");
 
+                myIntent.putExtra("extra", "alarm 0");
+
                 //canceling the alarm
                 alarm_manager.cancel(pending_intent);
+
+                sendBroadcast(myIntent);
             }
         });
 

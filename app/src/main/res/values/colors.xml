@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="primOne">#b3ed57</color>
+    <color name="primDark">#ed5631</color>
+    <color name="primAcc">#edcc10</color>
+
+    <color name="background">#fff093</color>
 </resources>

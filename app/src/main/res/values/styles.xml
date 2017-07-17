@@ -17,4 +17,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="DialogStyler2" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/primAcc</item>
+        <item name="android:colorPrimary">@color/primOne</item>
+        <item name="android:colorPrimaryDark">@color/primDark</item>
+    </style>
+
 </resources>
